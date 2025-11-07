@@ -1,5 +1,5 @@
 {
-  "originHash" : "0b587e64479fcc3639515fb1066441001885fcd37654a0940bae94f9c76163f2",
+  "originHash" : "19cfeeffbd208fcf369e193d3246d1423ca914e9d06385af89caec410a9eceb2",
   "pins" : [
     {
       "identity" : "bigint",
@@ -52,7 +52,7 @@
       "location" : "https://github.com/shami123/CustomBitcoinKit.git",
       "state" : {
         "branch" : "xvgChnages",
-        "revision" : "ac5cd7cceebc9034c178bbc6f40fcee7dfc1a03c"
+        "revision" : "84233eccfb38369419369e4f5b54b14d3c7bb434"
       }
     },
     {

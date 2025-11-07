@@ -94,6 +94,7 @@ class PaperKeyWordsViewController: AbstractPaperkeyViewController {
         } else {
             self.showNextButton()
         }
+        print("mnemonic==\(mnemonic)")
     }
 
     func hideButton(_ button: UIButton) {

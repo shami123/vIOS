@@ -81,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // here you can undo many of the changes made on entering the background.
 
         // Restart Tor.
-//        Application.container.resolve(TorClientProtocol.self)?.restart()
+        Application.container.resolve(TorClientProtocol.self)?.restart()
 
         self.log?.info("app delegate application will enter foreground")
     }

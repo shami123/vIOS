@@ -22,15 +22,7 @@ class LoadingTorViewController: UIViewController {
             fatalError("ApplicationRepository is not registered in the container")
         }
 
-        // ✅ Debug: Check setup status
-        print("🔍 LoadingTorViewController: Checking setup status")
-        print("  - Mnemonic count: \(applicationRepository.mnemonic?.count ?? 0)")
-        print("  - Passphrase length: \(applicationRepository.passphrase?.count ?? 0)")
-        print("  - PIN length: \(applicationRepository.pin.count)")
-        print("  - Wallet ID: \(applicationRepository.walletId ?? "nil")")
-        print("  - Setup status: \(applicationRepository.setup)")
-
-        // Determine which segue to perform
+      
         let identifier = applicationRepository.setup ? "showWallet" : "showWelcomeView"
         print("🔍 LoadingTorViewController: Navigating to \(identifier)")
 

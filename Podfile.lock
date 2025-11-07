@@ -1,3 +1,20 @@
-PODFILE CHECKSUM: d3e5c8e75fb0c6a8cf21f6ade50ad334f790ed72
+PODS:
+  - Tor (408.18.1):
+    - Tor/CTor (= 408.18.1)
+  - Tor/Core (408.18.1)
+  - Tor/CTor (408.18.1):
+    - Tor/Core
+
+DEPENDENCIES:
+  - Tor (~> 408)
+
+SPEC REPOS:
+  trunk:
+    - Tor
+
+SPEC CHECKSUMS:
+  Tor: 68d9512ae32b66c82eb7be4e5a5c3c8586d2cbf0
+
+PODFILE CHECKSUM: 05bd57c3f48e907e912fdaa9ea8ffdb2533b6493
 
 COCOAPODS: 1.16.2

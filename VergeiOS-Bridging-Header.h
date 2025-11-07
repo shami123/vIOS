@@ -8,6 +8,7 @@
 
 #ifndef VergeiOS_h
 #define VergeiOS_h
+
 //#include <openssl/bn.h>
 //#include <openssl/sha.h>
 //#include <openssl/rand.h>

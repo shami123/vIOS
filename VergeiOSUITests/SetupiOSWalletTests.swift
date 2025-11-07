@@ -55,7 +55,7 @@ class SetupiOSWalletTests: XCTestCase {
         self.app.buttons["Submit"].tap()
         
         self.setupPassphrase()
-//        self.setupTor()
+        self.setupTor()
         self.testVergeWalletDerivation()
         // Don't create a wallet until we have some stubbing.
 //         self.createWallet()
@@ -84,8 +84,6 @@ class SetupiOSWalletTests: XCTestCase {
         }
         let xprv = walletKey.extended()
         let xpub = walletKey.extendedPublicKey().description
-        print("🔐 wallet xprv: \(xprv)")
-        print("🌍 wallet xpub: \(xpub)")
 
         // Expected (from backend using bitcore-wallet-client-xvg):
         // const client = new Client({ baseUrl, verbose: true });
@@ -185,17 +183,17 @@ class SetupiOSWalletTests: XCTestCase {
         self.app.secureTextFields.element.typeText("\n")
     }
 
-//    private func setupTor() {
-//        // Swipe through the tor views
-//        XCTAssertTrue(self.app.staticTexts["Verge Currency\nHides your location"].waitForExistence(timeout: 5))
-//        self.app.swipeLeft()
-//        self.app.swipeLeft()
-//        // self.app.switches.element.tap()
-//
-//        let proceedWithTorButton = self.app.buttons["Proceed without Tor"]
-//        XCTAssertTrue(proceedWithTorButton.waitForExistence(timeout: 10))
-//        proceedWithTorButton.tap()
-//    }
+    private func setupTor() {
+        // Swipe through the tor views
+        XCTAssertTrue(self.app.staticTexts["Verge Currency\nHides your location"].waitForExistence(timeout: 5))
+        self.app.swipeLeft()
+        self.app.swipeLeft()
+        // self.app.switches.element.tap()
+
+        let proceedWithTorButton = self.app.buttons["Proceed without Tor"]
+        XCTAssertTrue(proceedWithTorButton.waitForExistence(timeout: 10))
+        proceedWithTorButton.tap()
+    }
 
     private func createWallet() {
         // Accept all terms
