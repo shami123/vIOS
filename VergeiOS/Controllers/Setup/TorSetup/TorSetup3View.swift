@@ -68,8 +68,8 @@ class TorSetup3View: UIView {
 
     func centerMapView(withIpLocation ipAddress: IpAddress) {
         let coordinate = CLLocationCoordinate2D(
-            latitude: CLLocationDegrees(ipAddress.latitude),
-            longitude: CLLocationDegrees(ipAddress.longitude)
+            latitude: CLLocationDegrees(ipAddress.latitude ?? 0.0),
+            longitude: CLLocationDegrees(ipAddress.longitude ?? 0.0)
         )
 
         let distance: CLLocationDistance = 12000

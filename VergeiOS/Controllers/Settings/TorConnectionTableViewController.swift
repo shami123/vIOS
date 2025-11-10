@@ -54,9 +54,13 @@ class TorConnectionTableViewController: EdgedTableViewController {
 
         let url = URL(string: Constants.ipCheckEndpoint)
         self.httpSession.dataTask(with: url!).then { response in
-            let ipAddress = try response.dataToJson(type: IpAddress.self)
+            if let str = String(data: response.data, encoding: .utf8) {
+                    print(str) // <-- see what the API actually returns
+                }
 
-            self.setIpAddressLabel(ipAddress.ip)
+            let ipAddress = try response.dataToJson(type: IpAddress.self)
+            print("ipAddress.ip--\(ipAddress)")
+//            self.setIpAddressLabel(ipAddress.ip)
             self.centerMapView(withIpLocation: ipAddress)
         }.catch { error in
             self.setIpAddressLabel("settings.torConnection.notAvailable".localized)
