@@ -15,9 +15,6 @@
 	<key>com.apple.developer.siri</key>
 	<true/>
 	<key>com.apple.security.application-groups</key>
-	<array>
-		<string>group.apple.DualityExtension</string>
-		<string>group.apple.VPNapp</string>
-	</array>
+	<array/>
 </dict>
 </plist>

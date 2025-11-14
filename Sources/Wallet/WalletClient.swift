@@ -856,35 +856,48 @@ extension WalletClient {
         return der
     }
     func derInt(_ data: Data) -> Data {
-        // Make sure to fully copy the underlying bytes
-        var raw = Data(Array(data)) // ✅ Forces real copy, safe for mutation
+        // 1. Trim leading zeros safely
+        var i = 0
+        while i < data.count - 1 && data[i] == 0 {
+            i += 1
+        }
+        let trimmed = data.subdata(in: i..<data.count)
         
-        // Remove leading zeros, but keep at least 1 byte
-        while raw.count > 1 && raw.first == 0 {
-            raw.removeFirst()
+        // 2. Prepend 0x00 if MSB is set
+        var finalRaw = trimmed
+        if let first = finalRaw.first, (first & 0x80) != 0 {
+            finalRaw = Data([0x00]) + finalRaw
         }
-
-        // If MSB is 1, prepend 0x00
-        if let first = raw.first, first & 0x80 != 0 {
-            raw.insert(0x00, at: 0)
-        }
-
+        
+        // 3. DER INTEGER encoding
         var result = Data([0x02]) // INTEGER tag
-
-        // DER length encoding
-        if raw.count < 0x80 {
-            result.append(UInt8(raw.count))
+        
+        // Fixed length encoding (inline implementation)
+        let length = finalRaw.count
+        if length < 0x80 {
+            result.append(UInt8(length))
         } else {
-            let lengthBytes = withUnsafeBytes(of: UInt32(raw.count).bigEndian) {
-                Data($0).drop { $0 == 0 }
+            // Calculate required byte count for length
+            var tempLength = length
+            var byteCount = 0
+            while tempLength > 0 {
+                byteCount += 1
+                tempLength >>= 8
             }
-            result.append(UInt8(0x80 | lengthBytes.count))
+            
+            // Add prefix indicating multi-byte length
+            result.append(UInt8(0x80 | byteCount))
+            
+            // Append actual length in big-endian
+            var bigEndianLength = CFSwapInt32HostToBig(UInt32(length))
+            let lengthBytes = withUnsafeBytes(of: &bigEndianLength) {
+                Data($0.suffix(byteCount))
+            }
             result.append(lengthBytes)
         }
-
-        result.append(raw)
+        
+        result.append(finalRaw)
         return result
     }
-
 }
 // swiftlint:enable file_length

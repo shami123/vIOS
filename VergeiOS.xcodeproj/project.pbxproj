@@ -2973,7 +2973,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				DEVELOPMENT_TEAM = B88XFKB847;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -2999,7 +2999,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				DEVELOPMENT_TEAM = B88XFKB847;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -3024,7 +3024,7 @@
 			baseConfigurationReference = 0B76FEA5550A3750EF2F0806 /* Pods-VergeiOS-VergeiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				DEVELOPMENT_TEAM = B88XFKB847;
 				INFOPLIST_FILE = VergeiOSUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3045,7 +3045,7 @@
 			baseConfigurationReference = 3A3B0A661463C3883E7F1C23 /* Pods-VergeiOS-VergeiOSUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				DEVELOPMENT_TEAM = B88XFKB847;
 				INFOPLIST_FILE = VergeiOSUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3195,8 +3195,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = VergeiOS/VergeiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "$(CF_BUNDLE_BUILD_VERSION_STRING)";
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = B88XFKB847;
 				DYLIB_CURRENT_VERSION = 0.1;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3217,9 +3217,9 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
-				MARKETING_VERSION = "$(CF_BUNDLE_SHORT_VERSION_STRING)";
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallet1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/shamikapoor/Documents/vIOS/VergeiOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -3237,8 +3237,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = VergeiOS/VergeiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "$(CF_BUNDLE_BUILD_VERSION_STRING)";
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = B88XFKB847;
 				DYLIB_CURRENT_VERSION = 0.1;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3259,9 +3259,9 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
-				MARKETING_VERSION = "$(CF_BUNDLE_SHORT_VERSION_STRING)";
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallet1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/shamikapoor/Documents/vIOS/VergeiOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -3277,7 +3277,7 @@
 				CODE_SIGN_ENTITLEMENTS = VergeSiriUI/Assets/VergeSiriUI.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				DEVELOPMENT_TEAM = B88XFKB847;
 				INFOPLIST_FILE = VergeSiriUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3287,7 +3287,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallet1.siriui;
+				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallets.siriui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -3302,7 +3302,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VergeSiriUI/Assets/VergeSiriUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				DEVELOPMENT_TEAM = B88XFKB847;
 				INFOPLIST_FILE = VergeSiriUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3311,7 +3311,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallet1.siriui;
+				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallets.siriui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -3386,7 +3386,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VergeSiri/VergeSiri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				DEVELOPMENT_TEAM = B88XFKB847;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -3400,7 +3400,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallet1.siri;
+				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallets.siri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -3414,7 +3414,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VergeSiri/VergeSiri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				DEVELOPMENT_TEAM = B88XFKB847;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -3427,7 +3427,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallet1.siri;
+				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallets.siri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
