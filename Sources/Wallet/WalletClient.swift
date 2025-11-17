@@ -151,6 +151,15 @@ public class WalletClient: WalletClientProtocol {
         }
     }
     private func getCopayerId() -> String {
+        // When wallet data has been reset, avoid using stale credentials.
+        // Return empty x-identity so the server does not associate with previous wallet.
+        if applicationRepository.mnemonic == nil ||
+           applicationRepository.walletId == nil ||
+           applicationRepository.walletSecret == nil ||
+           applicationRepository.copayerId == nil {
+            return ""
+        }
+
         // Derive copayerId from the same xPubKey used during joinWallet to avoid mismatches.
         let xPubKey = self.credentials.customExtendedPublicKey ?? self.credentials.publicKey.extended().description
         let hash = self.sjcl.sha256Hash(data: "xvg\(xPubKey)")
@@ -328,11 +337,6 @@ extension WalletClient {
             do {
                 let addressInfo = try JSONDecoder().decode(Vws.AddressInfo.self, from: data)
 
-                // Make sure the received address is really your address.
-//                let addressByPath = try self.credentials.privateKeyBy(
-//                    path: addressInfo.path,
-//    privateKey: self.credentials.bip44PrivateKey
-//                ).publicKey().toLegacy().description
                 let hdPrivateKey = try self.credentials.privateKeyBy(
                     path: addressInfo.path,
                     privateKey: self.credentials.bip44PrivateKey
