@@ -1,13 +1,14 @@
-
+//
 //  TorConnectionTableViewController.swift
 //  VergeiOS
 //
 //  Created by Swen van Zanten on 03/10/2018.
 //  Copyright © 2018 Verge Currency. All rights reserved.
-
+//
 
 import UIKit
 import MapKit
+
 class TorConnectionTableViewController: EdgedTableViewController {
 
     @IBOutlet weak var useTorSwitch: UISwitch!
@@ -34,33 +35,35 @@ class TorConnectionTableViewController: EdgedTableViewController {
         applicationRepository.useTor = sender.isOn
 
         if sender.isOn {
+
             setIpAddressLabel("settings.torConnection.loadingLabel".localized)
 
-            self.torClient.start { _ in
-                self.updateIPAddress()
+            // prevent double-start crash
+            if !torClient.hasStarted {
+                torClient.start { [weak self] _ in
+                    self?.updateIPAddress()
+                }
+            } else {
+                print("Tor already running — skipping start()")
+                updateIPAddress()
             }
+
         } else {
-            self.torClient.resign()
-
-            self.updateIPAddress()
-
-            // Notify the whole application.
+            torClient.resign()
+            updateIPAddress()
             NotificationCenter.default.post(name: .didTurnOffTor, object: self)
         }
     }
+
 
     func updateIPAddress() {
         setIpAddressLabel("settings.torConnection.loadingLabel".localized)
 
         let url = URL(string: Constants.ipCheckEndpoint)
         self.httpSession.dataTask(with: url!).then { response in
-            if let str = String(data: response.data, encoding: .utf8) {
-                    print(str) // <-- see what the API actually returns
-                }
-
             let ipAddress = try response.dataToJson(type: IpAddress.self)
-            print("ipAddress.ip--\(ipAddress)")
-//            self.setIpAddressLabel(ipAddress.ip)
+
+            self.setIpAddressLabel(ipAddress.ip)
             self.centerMapView(withIpLocation: ipAddress)
         }.catch { error in
             self.setIpAddressLabel("settings.torConnection.notAvailable".localized)

@@ -50,11 +50,12 @@ class TorSetup3View: UIView {
             self.torClient.resign()
 
             self.updateIPAddress()
-//
-//            // Notify the whole application.
+
+            // Notify the whole application.
             NotificationCenter.default.post(name: .didTurnOffTor, object: self)
         }
     }
+
 
     func updateIPAddress() {
         let url = URL(string: Constants.ipCheckEndpoint)
@@ -65,6 +66,7 @@ class TorSetup3View: UIView {
             self.log.error("tor setup error while fetching your ip: \(error)")
         }
     }
+
 
     func centerMapView(withIpLocation ipAddress: IpAddress) {
         let coordinate = CLLocationCoordinate2D(

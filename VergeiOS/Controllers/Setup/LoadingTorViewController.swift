@@ -22,7 +22,7 @@ class LoadingTorViewController: UIViewController {
             fatalError("ApplicationRepository is not registered in the container")
         }
 
-      
+
         let identifier = applicationRepository.setup ? "showWallet" : "showWelcomeView"
         print("🔍 LoadingTorViewController: Navigating to \(identifier)")
 

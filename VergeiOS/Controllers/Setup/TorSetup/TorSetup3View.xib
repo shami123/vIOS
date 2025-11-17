@@ -124,6 +124,7 @@
                 <outlet property="mapView" destination="4GY-Ty-MG9" id="yv3-RM-RtV"/>
                 <outlet property="proceedButton" destination="Cw8-ye-Hxh" id="1KG-Lt-tpF"/>
             </connections>
+
             <point key="canvasLocation" x="53.600000000000001" y="54.872563718140931"/>
         </view>
     </objects>

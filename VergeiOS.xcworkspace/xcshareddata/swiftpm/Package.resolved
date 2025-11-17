@@ -20,6 +20,15 @@
       }
     },
     {
+      "identity" : "copenssl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vapor-community/copenssl.git",
+      "state" : {
+        "revision" : "a347e9ec038b134aecf42e0c21f2deb9035adf3f",
+        "version" : "1.0.0-rc.1"
+      }
+    },
+    {
       "identity" : "corestore",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/JohnEstropia/CoreStore.git",
@@ -43,7 +52,7 @@
       "location" : "https://github.com/shami123/CustomBitcoinKit.git",
       "state" : {
         "branch" : "xvgChnages",
-        "revision" : "84233eccfb38369419369e4f5b54b14d3c7bb434"
+        "revision" : "8c504c40622a2d92fac958d0c700916fffdd726e"
       }
     },
     {

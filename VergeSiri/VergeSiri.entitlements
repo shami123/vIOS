@@ -3,6 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>com.apple.security.application-groups</key>
+<<<<<<< HEAD
 	<array/>
+=======
+	<array>
+		<string>group.apple.DualityExtension</string>
+		<string>group.apple.VPNapp</string>
+	</array>
+>>>>>>> upstream/master
 </dict>
 </plist>

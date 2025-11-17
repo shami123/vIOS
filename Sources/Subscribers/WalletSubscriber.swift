@@ -45,6 +45,7 @@ class WalletSubscriber: Subscriber {
         walletTicker.stop()
         fiatRateTicker.stop()
         applicationRepository.amount = 0
+
     }
 
     @objc func didBroadcastTx(notification: Notification) {

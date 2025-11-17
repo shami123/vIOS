@@ -67,6 +67,7 @@ public class WalletClient: WalletClientProtocol {
             } else {
                 copayerId = self.getCopayerId()
             }
+
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             request.setValue(copayerId, forHTTPHeaderField: "x-identity")
@@ -103,6 +104,7 @@ public class WalletClient: WalletClientProtocol {
             }
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
+
             request.setValue(copayerId, forHTTPHeaderField: "x-identity")
             request.setValue(signature, forHTTPHeaderField: "x-signature")
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -128,6 +130,7 @@ public class WalletClient: WalletClientProtocol {
             } else {
                 copayerId = self.getCopayerId()
             }
+
             var request = URLRequest(url: url)
             request.httpMethod = "DELETE"
             request.setValue(copayerId, forHTTPHeaderField: "x-identity")
@@ -337,6 +340,7 @@ extension WalletClient {
             do {
                 let addressInfo = try JSONDecoder().decode(Vws.AddressInfo.self, from: data)
 
+
                 let hdPrivateKey = try self.credentials.privateKeyBy(
                     path: addressInfo.path,
                     privateKey: self.credentials.bip44PrivateKey
@@ -491,6 +495,7 @@ extension WalletClient {
         } else {
             copayerId = self.getCopayerId()
         }
+
 
         if referencedUrl.contains("/v1/balance/") {
             let signature = try self.getSignature(url: referencedUrl, method: "get")
@@ -833,6 +838,7 @@ extension WalletClient {
         guard compactSig.count == 64 else {
             throw NSError(domain: "SignatureError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Compact signature must be 64 bytes"])
         }
+
 
         let r = Data(compactSig.prefix(32))
         let s = Data(compactSig.suffix(32))

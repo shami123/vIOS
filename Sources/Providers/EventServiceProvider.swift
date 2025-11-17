@@ -30,13 +30,13 @@ class EventServiceProvider: ServiceProvider {
             return WalletNotificationsSubscriber(walletClient: r.resolve(WalletClientProtocol.self)!)
         }
 
-        self.register(name: TorConnectionSubscriber.typeName) { r in
-            return TorConnectionSubscriber(
-                fiatRateTicker: r.resolve(FiatRateTicker.self)!,
-                applicationRepository: r.resolve(ApplicationRepository.self)!,
-                walletTicker: r.resolve(WalletTicker.self)!
-            )
-        }
+//        self.register(name: TorConnectionSubscriber.typeName) { r in
+//            return TorConnectionSubscriber(
+//                fiatRateTicker: r.resolve(FiatRateTicker.self)!,
+//                applicationRepository: r.resolve(ApplicationRepository.self)!,
+//                walletTicker: r.resolve(WalletTicker.self)!
+//            )
+//        }
 
         self.register(name: WatchSubscriber.typeName) { r in
             return WatchSubscriber(watchSyncManager: r.resolve(WatchSyncManager.self)!)

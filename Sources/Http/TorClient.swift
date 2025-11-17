@@ -20,6 +20,7 @@ class TorClient: TorClientProtocol, HiddenClientProtocol {
 
     private let applicationRepository: ApplicationRepository
     private let log: Logging.Logger
+    private(set) var hasStarted = false
 
     private var config: TorConfiguration = TorConfiguration()
     private var thread: TorThread?
@@ -111,11 +112,21 @@ class TorClient: TorClientProtocol, HiddenClientProtocol {
         self.controller = TorController(socketURL: controlSocket)
 
         // Start a tor thread.
-        if (self.thread?.isExecuting ?? false) == false {
-            self.thread?.start()
+        // Prevent double-start crash
+        if hasStarted {
+            self.log.warning("⚠️ Tor already started — skipping start()")
+            NotificationCenter.default.post(name: .didFinishTorStart, object: self)
+            return completion(true)
+        }
 
+        hasStarted = true
+
+        // Start a tor thread
+        if self.thread?.isExecuting == false {
+            self.thread?.start()
             NotificationCenter.default.post(name: .didStartTorThread, object: self)
         }
+
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.connectController(self.controller) { success in
@@ -148,7 +159,7 @@ class TorClient: TorClientProtocol, HiddenClientProtocol {
         if !self.isOperational {
             return self.log.warning("tor couldn't resign cause it's still operational")
         }
-
+        hasStarted = false
         self.controller.disconnect()
         self.controller = nil
         self.thread?.cancel()

@@ -10,6 +10,7 @@ import Foundation
 import Logging
 import Tor
 
+
 class WalletStatusSubscriber: Subscriber {
     
     enum WalletStatusError: Error {
@@ -121,6 +122,7 @@ class WalletStatusSubscriber: Subscriber {
                 DispatchQueue.main.async {
                     completion(false)
                 }
+
             }
         }
     }
@@ -204,7 +206,7 @@ class WalletStatusSubscriber: Subscriber {
         }
     }
 
-    // MARK: - Notification Subscription
+
     override func getSubscribedEvents() -> [Notification.Name: Selector] {
         return [
             .didBootApplication: #selector(didBootApplication(notification:))
