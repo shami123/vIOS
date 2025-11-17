@@ -447,17 +447,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		040CF93C33D89AF69CEBBDC8 /* Pods-VergeiOS-VergeiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeiOS-VergeiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-VergeiOS-VergeiOSUITests/Pods-VergeiOS-VergeiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		052F09E604075F100BD51145 /* Pods-VergeSiriUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeSiriUI.release.xcconfig"; path = "Target Support Files/Pods-VergeSiriUI/Pods-VergeSiriUI.release.xcconfig"; sourceTree = "<group>"; };
 		07938403210DAD3800C3C799 /* RestoreGuide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestoreGuide.storyboard; sourceTree = "<group>"; };
 		07938406210DB46C00C3C799 /* RestoreWalletController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreWalletController.swift; sourceTree = "<group>"; };
 		0793840B210DC8A000C3C799 /* EnterRecoveryKeyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRecoveryKeyController.swift; sourceTree = "<group>"; };
 		0793840D210DD2ED00C3C799 /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		0793840F210DD73900C3C799 /* FinalRecoveryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalRecoveryController.swift; sourceTree = "<group>"; };
 		16ADC8DAAE4389BFBBF7D17B /* Pods_VergeSiriUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VergeSiriUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BDCD219A03AD5D0A6FAFA4B /* Pods-VergeWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeWatch Extension.debug.xcconfig"; path = "Target Support Files/Pods-VergeWatch Extension/Pods-VergeWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		2486D73F9AA51069901DE250 /* Pods-VergeSiriUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeSiriUI.debug.xcconfig"; path = "Target Support Files/Pods-VergeSiriUI/Pods-VergeSiriUI.debug.xcconfig"; sourceTree = "<group>"; };
+		2E97FCEBFC222CB83EC856E0 /* Pods-VergeSiri.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeSiri.release.xcconfig"; path = "Target Support Files/Pods-VergeSiri/Pods-VergeSiri.release.xcconfig"; sourceTree = "<group>"; };
 		565DF16322E5BB8F004AD2E8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		596CFB60D8B8AEF01FBF5E3C /* Pods_VergeiOS_VergeiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VergeiOS_VergeiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A67FC8952B78AB0E8CC99EB /* Pods_VergeWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VergeWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF5BA4DD382CEAED4961D4C /* Pods-VergeSiri.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeSiri.debug.xcconfig"; path = "Target Support Files/Pods-VergeSiri/Pods-VergeSiri.debug.xcconfig"; sourceTree = "<group>"; };
+		810E805999C1C39E261D8A0F /* Pods-VergeiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeiOS.release.xcconfig"; path = "Target Support Files/Pods-VergeiOS/Pods-VergeiOS.release.xcconfig"; sourceTree = "<group>"; };
 		853A5FC462BF5240AFC66555 /* Pods_VergeiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VergeiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		864500D6A9D66774DD5861E5 /* Pods-VergeiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeiOS.debug.xcconfig"; path = "Target Support Files/Pods-VergeiOS/Pods-VergeiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		894E682F5B20D06B1B8C775B /* Pods_VergeSiri.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VergeSiri.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92714455730BCF59886CC868 /* Pods-VergeiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeiOSTests.release.xcconfig"; path = "Target Support Files/Pods-VergeiOSTests/Pods-VergeiOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		936099E32E864B2A0045CAF9 /* VergeiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VergeiOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		936099E72E8654720045CAF9 /* HGPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGPlaceholderView.swift; sourceTree = "<group>"; };
 		93871CEA2EBF2004006B8CCA /* Tor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -486,6 +495,7 @@
 		93CE5A692E98C3A500A0D168 /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 		93DA191C2EBE1F69009A50DD /* TorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorClient.swift; sourceTree = "<group>"; };
 		93FDEEA12E904F4900B583A0 /* BIP32ManualDerivator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIP32ManualDerivator.swift; sourceTree = "<group>"; };
+		991AB1E77A21D637E3D39CC6 /* Pods-VergeiOS-VergeiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeiOS-VergeiOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-VergeiOS-VergeiOSUITests/Pods-VergeiOS-VergeiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A302D2E8211F01CB00EA8091 /* BorderPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderPanelView.swift; sourceTree = "<group>"; };
 		A302D2EA211F047800EA8091 /* SelectorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorButton.swift; sourceTree = "<group>"; };
 		A302D2EE211F2E4900EA8091 /* SelectRecipientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRecipientTableViewController.swift; sourceTree = "<group>"; };
@@ -716,6 +726,7 @@
 		A3EA38E522FA196900E89CF0 /* ConfirmSweepView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmSweepView.xib; sourceTree = "<group>"; };
 		A3EA38E722FB58CE00E89CF0 /* WalletSweepingScannerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletSweepingScannerViewDelegate.swift; sourceTree = "<group>"; };
 		A3EA38E922FB619F00E89CF0 /* SweeperHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweeperHelperProtocol.swift; sourceTree = "<group>"; };
+		AFEF2C2C83148AAC920DD8F0 /* Pods-VergeiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-VergeiOSTests/Pods-VergeiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2BD705EE6FF53E105142D8E /* HiddenClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenClientMock.swift; sourceTree = "<group>"; };
 		B2BD707FF14AA2915590755F /* ApplicationServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServiceProvider.swift; sourceTree = "<group>"; };
 		B2BD709F30B9516F1A745E7A /* RatesClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesClient.swift; sourceTree = "<group>"; };
@@ -850,12 +861,15 @@
 		CAFB2007228AC9170096623D /* sv-SE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sv-SE"; path = "sv-SE.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CAFC45E6228C169700D4F287 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CAFC45E7228C189100D4F287 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F12E880B0F9F10194A4FAFE8 /* Pods-VergeWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VergeWatch Extension.release.xcconfig"; path = "Target Support Files/Pods-VergeWatch Extension/Pods-VergeWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
 		F92D18C27517F6A90F459E94 /* Pods_VergeiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VergeiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		93A0E5AE2E868AE900CA0875 /* HGPlaceholders */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = HGPlaceholders;
 			sourceTree = "<group>";
 		};
@@ -950,6 +964,26 @@
 				B2BD74BCCE08B0DD66EDE69A /* Bn */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		788A60138FFD64ED7759EC09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BF5BA4DD382CEAED4961D4C /* Pods-VergeSiri.debug.xcconfig */,
+				2E97FCEBFC222CB83EC856E0 /* Pods-VergeSiri.release.xcconfig */,
+				2486D73F9AA51069901DE250 /* Pods-VergeSiriUI.debug.xcconfig */,
+				052F09E604075F100BD51145 /* Pods-VergeSiriUI.release.xcconfig */,
+				1BDCD219A03AD5D0A6FAFA4B /* Pods-VergeWatch Extension.debug.xcconfig */,
+				F12E880B0F9F10194A4FAFE8 /* Pods-VergeWatch Extension.release.xcconfig */,
+				864500D6A9D66774DD5861E5 /* Pods-VergeiOS.debug.xcconfig */,
+				810E805999C1C39E261D8A0F /* Pods-VergeiOS.release.xcconfig */,
+				991AB1E77A21D637E3D39CC6 /* Pods-VergeiOS-VergeiOSUITests.debug.xcconfig */,
+				040CF93C33D89AF69CEBBDC8 /* Pods-VergeiOS-VergeiOSUITests.release.xcconfig */,
+				AFEF2C2C83148AAC920DD8F0 /* Pods-VergeiOSTests.debug.xcconfig */,
+				92714455730BCF59886CC868 /* Pods-VergeiOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		93CE5A5B2E98C38D00A0D168 /* HDWalletKit */ = {
@@ -1411,6 +1445,7 @@
 				CA522EA8220318B000331B0F /* VergeSiriUI */,
 				CA8FCF4821F7C3A20069D150 /* VergeWatch */,
 				CA8FCF5721F7C3A30069D150 /* VergeWatch Extension */,
+				788A60138FFD64ED7759EC09 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2420,13 +2455,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VergeiOS-VergeiOSUITests/Pods-VergeiOS-VergeiOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VergeiOS-VergeiOSUITests/Pods-VergeiOS-VergeiOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2519,13 +2550,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VergeiOS/Pods-VergeiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VergeiOS/Pods-VergeiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2937,6 +2964,7 @@
 /* Begin XCBuildConfiguration section */
 		A325667E211CBA9A006FB08A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFEF2C2C83148AAC920DD8F0 /* Pods-VergeiOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -2962,6 +2990,7 @@
 		};
 		A325667F211CBA9A006FB08A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92714455730BCF59886CC868 /* Pods-VergeiOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -2987,6 +3016,7 @@
 		};
 		A325669A211CBBE2006FB08A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 991AB1E77A21D637E3D39CC6 /* Pods-VergeiOS-VergeiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B88XFKB847;
@@ -3007,6 +3037,7 @@
 		};
 		A325669B211CBBE2006FB08A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 040CF93C33D89AF69CEBBDC8 /* Pods-VergeiOS-VergeiOSUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B88XFKB847;
@@ -3152,6 +3183,7 @@
 		};
 		A33F6A9820EEE487001492C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 864500D6A9D66774DD5861E5 /* Pods-VergeiOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = YES;
@@ -3193,6 +3225,7 @@
 		};
 		A33F6A9920EEE487001492C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 810E805999C1C39E261D8A0F /* Pods-VergeiOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = YES;
@@ -3234,6 +3267,7 @@
 		};
 		CA522EB3220318B000331B0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2486D73F9AA51069901DE250 /* Pods-VergeSiriUI.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VergeSiriUI/Assets/VergeSiriUI.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -3259,6 +3293,7 @@
 		};
 		CA522EB4220318B000331B0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 052F09E604075F100BD51145 /* Pods-VergeSiriUI.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VergeSiriUI/Assets/VergeSiriUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -3281,6 +3316,7 @@
 		};
 		CA8FCF6721F7C3A40069D150 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDCD219A03AD5D0A6FAFA4B /* Pods-VergeWatch Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -3311,6 +3347,7 @@
 		};
 		CA8FCF6821F7C3A40069D150 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F12E880B0F9F10194A4FAFE8 /* Pods-VergeWatch Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -3340,6 +3377,7 @@
 		};
 		CAD929FB21E7DFA300CD5EBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF5BA4DD382CEAED4961D4C /* Pods-VergeSiri.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VergeSiri/VergeSiri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -3367,6 +3405,7 @@
 		};
 		CAD929FC21E7DFA300CD5EBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E97FCEBFC222CB83EC856E0 /* Pods-VergeSiri.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VergeSiri/VergeSiri.entitlements;
 				CODE_SIGN_STYLE = Automatic;

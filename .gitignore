@@ -40,3 +40,4 @@ fastlane/screenshots
 fastlane/test_output
 
 Docker/.env
+Pods/
