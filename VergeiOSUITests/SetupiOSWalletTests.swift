@@ -55,7 +55,8 @@ class SetupiOSWalletTests: XCTestCase {
         self.app.buttons["Submit"].tap()
         
         self.setupPassphrase()
-//        self.setupTor()
+        self.setupTor()
+
         self.testVergeWalletDerivation()
         // Don't create a wallet until we have some stubbing.
 //         self.createWallet()
@@ -84,9 +85,6 @@ class SetupiOSWalletTests: XCTestCase {
         }
         let xprv = walletKey.extended()
         let xpub = walletKey.extendedPublicKey().description
-        print("🔐 wallet xprv: \(xprv)")
-        print("🌍 wallet xpub: \(xpub)")
-
         // Expected (from backend using bitcore-wallet-client-xvg):
         // const client = new Client({ baseUrl, verbose: true });
         // client.seedFromMnemonic(mnemonic, { network: 'livenet', coin: 'xvg' });

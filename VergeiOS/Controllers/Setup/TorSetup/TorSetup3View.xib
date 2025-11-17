@@ -68,6 +68,9 @@
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kXB-TG-Moz">
                             <rect key="frame" x="95.5" y="0.0" width="51" height="31"/>
                             <color key="onTintColor" name="VergeGreen"/>
+                            <connections>
+                                <action selector="changeTorUsage:" destination="iN0-l3-epB" eventType="valueChanged" id="YmV-I4-2jy"/>
+                            </connections>
                         </switch>
                     </subviews>
                 </stackView>
@@ -117,6 +120,11 @@
                 <constraint firstItem="0Ny-Gh-19i" firstAttribute="top" secondItem="VTQ-u6-pQ5" secondAttribute="bottom" constant="24" id="qsl-EL-Rke"/>
                 <constraint firstItem="JGl-d4-D5U" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xOz-t4-35V"/>
             </constraints>
+            <connections>
+                <outlet property="mapView" destination="4GY-Ty-MG9" id="yv3-RM-RtV"/>
+                <outlet property="proceedButton" destination="Cw8-ye-Hxh" id="1KG-Lt-tpF"/>
+            </connections>
+
             <point key="canvasLocation" x="53.600000000000001" y="54.872563718140931"/>
         </view>
     </objects>

@@ -127,7 +127,7 @@ class WalletManager: WalletManagerProtocol {
             guard let walletIdentifier = walletId?.identifier else {
                 return fulfill(nil)
             }
-
+    
             self.walletClient.joinWallet(walletIdentifier: walletIdentifier) { walletJoin, errorResponse, error in
                 if let walletJoin = walletJoin {
                     self.applicationRepository.copayerId = walletJoin.copayerId
@@ -135,21 +135,27 @@ class WalletManager: WalletManagerProtocol {
                         "copayerId": Logger.MetadataValue(stringLiteral: walletJoin.copayerId),
                         "walletId": Logger.MetadataValue(stringLiteral: walletJoin.wallet.id)
                     ])
-
                     return fulfill(walletJoin)
                 }
-
+    
                 if errorResponse?.code == .CopayerRegistered {
-                    self.log.notice("wallet manager wallet already exists")
-
+                    let sjcl = SJCL()
+                    let xPubKey = self.credentials.customExtendedPublicKey ?? self.credentials.publicKey.extended().description
+                    let hash = sjcl.sha256Hash(data: "xvg\(xPubKey)")
+                    let derivedCopayerId = sjcl.hexFromBits(hash: hash)
+                    self.applicationRepository.copayerId = derivedCopayerId
+    
+                    self.log.notice("wallet manager copayer already registered; using existing copayerId", metadata: [
+                        "copayerId": Logger.MetadataValue(stringLiteral: derivedCopayerId),
+                        "walletId": Logger.MetadataValue(stringLiteral: walletIdentifier)
+                    ])
+    
                     return fulfill(nil)
                 }
-
+    
                 let error = errorResponse?.error ?? error ?? NSError("??")
                 let errorMessage = errorResponse?.message ?? error.localizedDescription
-
                 self.log.error("wallet manager joining wallet failed with: \(errorMessage)")
-
                 reject(error)
             }
         }

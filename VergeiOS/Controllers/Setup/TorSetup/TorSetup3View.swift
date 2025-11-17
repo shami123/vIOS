@@ -17,7 +17,7 @@ class TorSetup3View: UIView {
 
     var viewController: TorViewController!
     var applicationRepository: ApplicationRepository!
-//    var torClient: TorClient!
+    var torClient: TorClient!
     var httpSession: HttpSessionProtocol!
     var log: Logger!
 
@@ -25,51 +25,53 @@ class TorSetup3View: UIView {
         super.awakeFromNib()
 
         self.applicationRepository = Application.container.resolve(ApplicationRepository.self)!
-//        self.torClient = Application.container.resolve(TorClient.self)!
+        self.torClient = Application.container.resolve(TorClient.self)!
         self.httpSession = Application.container.resolve(HttpSessionProtocol.self)!
         self.log = Application.container.resolve(Logger.self)!
 
 //        self.updateIPAddress()
     }
 
-//    @IBAction func changeTorUsage(_ sender: UISwitch) {
-//        self.applicationRepository.useTor = sender.isOn
-//
-//        proceedButton.setTitle(
-//            sender.isOn ?
-//                "setup.tor.slide3.positiveButton".localized :
-//                "setup.tor.slide3.negativeButton".localized,
-//            for: .normal
-//        )
-//
-//        if sender.isOn {
-////            self.torClient.start { _ in
-////                self.updateIPAddress()
-////            }
-//        } else {
-////            self.torClient.resign()
-//
-////            self.updateIPAddress()
-////
-////            // Notify the whole application.
-////            NotificationCenter.default.post(name: .didTurnOffTor, object: self)
-//        }
-//    }
+    @IBAction func changeTorUsage(_ sender: UISwitch) {
+        self.applicationRepository.useTor = sender.isOn
 
-//    func updateIPAddress() {
-//        let url = URL(string: Constants.ipCheckEndpoint)
-//
-//        self.httpSession.dataTask(with: url!).then { response in
-//            self.centerMapView(withIpLocation: try response.dataToJson(type: IpAddress.self))
-//        }.catch { error in
-//            self.log.error("tor setup error while fetching your ip: \(error)")
-//        }
-//    }
+        proceedButton.setTitle(
+            sender.isOn ?
+                "setup.tor.slide3.positiveButton".localized :
+                "setup.tor.slide3.negativeButton".localized,
+            for: .normal
+        )
+
+        if sender.isOn {
+            self.torClient.start { _ in
+                self.updateIPAddress()
+            }
+        } else {
+            self.torClient.resign()
+
+            self.updateIPAddress()
+
+            // Notify the whole application.
+            NotificationCenter.default.post(name: .didTurnOffTor, object: self)
+        }
+    }
+
+
+    func updateIPAddress() {
+        let url = URL(string: Constants.ipCheckEndpoint)
+
+        self.httpSession.dataTask(with: url!).then { response in
+            self.centerMapView(withIpLocation: try response.dataToJson(type: IpAddress.self))
+        }.catch { error in
+            self.log.error("tor setup error while fetching your ip: \(error)")
+        }
+    }
+
 
     func centerMapView(withIpLocation ipAddress: IpAddress) {
         let coordinate = CLLocationCoordinate2D(
-            latitude: CLLocationDegrees(ipAddress.latitude),
-            longitude: CLLocationDegrees(ipAddress.longitude)
+            latitude: CLLocationDegrees(ipAddress.latitude ?? 0.0),
+            longitude: CLLocationDegrees(ipAddress.longitude ?? 0.0)
         )
 
         let distance: CLLocationDistance = 12000
