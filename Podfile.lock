@@ -1,8 +1,8 @@
 PODS:
-  - Tor (408.18.1):
-    - Tor/CTor (= 408.18.1)
-  - Tor/Core (408.18.1)
-  - Tor/CTor (408.18.1):
+  - Tor (408.19.1):
+    - Tor/CTor (= 408.19.1)
+  - Tor/Core (408.19.1)
+  - Tor/CTor (408.19.1):
     - Tor/Core
 
 DEPENDENCIES:
@@ -13,7 +13,7 @@ SPEC REPOS:
     - Tor
 
 SPEC CHECKSUMS:
-  Tor: 68d9512ae32b66c82eb7be4e5a5c3c8586d2cbf0
+  Tor: 643811ad926f7e7bce1525f21b7645701678de48
 
 PODFILE CHECKSUM: 05bd57c3f48e907e912fdaa9ea8ffdb2533b6493
 
