@@ -20,15 +20,6 @@
       }
     },
     {
-      "identity" : "copenssl",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/vapor-community/copenssl.git",
-      "state" : {
-        "revision" : "a347e9ec038b134aecf42e0c21f2deb9035adf3f",
-        "version" : "1.0.0-rc.1"
-      }
-    },
-    {
       "identity" : "corestore",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/JohnEstropia/CoreStore.git",
