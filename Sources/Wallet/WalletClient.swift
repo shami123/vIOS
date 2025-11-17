@@ -55,19 +55,17 @@ public class WalletClient: WalletClientProtocol {
 
     private func getRequest(url: String, completion: @escaping URLCompletion) {
         let referencedUrl = url.addUrlReference()
-
         guard let url = URL(string: "\(baseUrl)\(referencedUrl)".urlify()) else {
             return completion(nil, nil, NSError(domain: "Wrong URL", code: 500))
         }
 
         do {
             let signature = try getSignature(url: referencedUrl, method: "get")
-            var copayerId = ""
-            if self.applicationRepository.copayerId == "" {
+            let copayerId: String
+            if let stored = self.applicationRepository.copayerId, !stored.isEmpty {
+                copayerId = stored
+            } else {
                 copayerId = self.getCopayerId()
-            }
-            else {
-                copayerId = self.applicationRepository.copayerId ?? ""
             }
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
@@ -76,7 +74,6 @@ public class WalletClient: WalletClientProtocol {
             request.setValue("application/json", forHTTPHeaderField: "accept")
 
             self.log(request: request, signature: signature, copayerId: copayerId)
-
             self.request(request, completion: completion)
         } catch {
             return completion(nil, nil, error)
@@ -94,28 +91,24 @@ public class WalletClient: WalletClientProtocol {
             var argumentsString = "{}"
             if argumentsData != nil {
                 argumentsString = String(data: argumentsData!, encoding: .utf8) ?? "{}"
-                // Remove escaped slashes.
                 argumentsString = argumentsString.replacingOccurrences(of: "\\/", with: "/")
             }
 
             let signature = try getSignature(url: uri, method: "post", arguments: argumentsString)
-            var copayerId = ""
-            if self.applicationRepository.copayerId == "" {
+            let copayerId: String
+            if let stored = self.applicationRepository.copayerId, !stored.isEmpty {
+                copayerId = stored
+            } else {
                 copayerId = self.getCopayerId()
-            }
-            else {
-                copayerId = self.applicationRepository.copayerId ?? ""
             }
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
-//            request.setValue("bwc-8.1.1",forHTTPHeaderField: "x-client-version")
             request.setValue(copayerId, forHTTPHeaderField: "x-identity")
             request.setValue(signature, forHTTPHeaderField: "x-signature")
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpBody = argumentsData
 
             self.log(request: request, signature: signature, copayerId: copayerId)
-
             self.request(request, completion: completion)
         } catch {
             return completion(nil, nil, error)
@@ -123,19 +116,17 @@ public class WalletClient: WalletClientProtocol {
     }
     private func deleteRequest(url: String, completion: @escaping URLCompletion) {
         let referencedUrl = url.addUrlReference()
-
         guard let url = URL(string: "\(baseUrl)\(referencedUrl)".urlify()) else {
             return completion(nil, nil, NSError(domain: "Wrong URL", code: 500))
         }
 
         do {
             let signature = try getSignature(url: referencedUrl, method: "delete")
-            var copayerId = ""
-            if self.applicationRepository.copayerId == "" {
+            let copayerId: String
+            if let stored = self.applicationRepository.copayerId, !stored.isEmpty {
+                copayerId = stored
+            } else {
                 copayerId = self.getCopayerId()
-            }
-            else {
-                copayerId = self.applicationRepository.copayerId ?? ""
             }
             var request = URLRequest(url: url)
             request.httpMethod = "DELETE"
@@ -144,7 +135,6 @@ public class WalletClient: WalletClientProtocol {
             request.setValue("application/json", forHTTPHeaderField: "accept")
 
             self.log(request: request, signature: signature, copayerId: copayerId)
-
             self.request(request, completion: completion)
         } catch {
             return completion(nil, nil, error)
@@ -161,9 +151,9 @@ public class WalletClient: WalletClientProtocol {
         }
     }
     private func getCopayerId() -> String {
-        let xPubKey = self.credentials.publicKey.extended()
+        // Derive copayerId from the same xPubKey used during joinWallet to avoid mismatches.
+        let xPubKey = self.credentials.customExtendedPublicKey ?? self.credentials.publicKey.extended().description
         let hash = self.sjcl.sha256Hash(data: "xvg\(xPubKey)")
-
         return self.sjcl.hexFromBits(hash: hash)
     }
 //    private func getCopayerId() -> String {
@@ -288,6 +278,7 @@ print("create wallet--\(args)")
                 let joinWalletError = try? JSONDecoder().decode(Vws.WalletJoin.Error.self, from: data)
                 let returnError = joinWalletError == nil ? error : nil
                 completion(nil, joinWalletError, returnError)
+                
             }
         }
     }
@@ -490,13 +481,11 @@ extension WalletClient {
 
         let url = "\(self.baseUrl)\(referencedUrl)".urlify()
         
-        var copayerId = ""
-         
-        if self.applicationRepository.copayerId == "" {
+        let copayerId: String
+        if let stored = self.applicationRepository.copayerId, !stored.isEmpty {
+            copayerId = stored
+        } else {
             copayerId = self.getCopayerId()
-        }
-        else {
-            copayerId = self.applicationRepository.copayerId ?? ""
         }
 
         if referencedUrl.contains("/v1/balance/") {

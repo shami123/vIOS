@@ -8,7 +8,7 @@ import Foundation
 extension Vws {
     struct WalletJoin: Decodable {
         struct Error: DecodableError {
-            var status: String
+            var status: String?
             
             enum Code: String, Decodable {
                 case WalletNotFound = "WALLET_NOT_FOUND"
