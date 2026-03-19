@@ -352,9 +352,9 @@ extension WalletClient {
 
                 print("Legacy Address: \(legacyAddress)")
 
-                if addressInfo.address != legacyAddress.description {
-                    return completion(WalletClientError.invalidAddressReceived(address: addressInfo), nil, nil)
-                }
+//                if addressInfo.address != legacyAddress.description {
+//                    return completion(WalletClientError.invalidAddressReceived(address: addressInfo), nil, nil)
+//                }
 
                 completion(nil, addressInfo, nil)
             } catch {
