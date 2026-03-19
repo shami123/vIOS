@@ -476,6 +476,7 @@
 		93A0E75A2E87B1DE00CA0875 /* libssl-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libssl-iOS.a"; sourceTree = "<group>"; };
 		93A0E75B2E87B1DE00CA0875 /* libssl-iOS-Sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libssl-iOS-Sim.a"; sourceTree = "<group>"; };
 		93A0E7602E87BD3C00CA0875 /* RIPEMD160.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
+		93A774722F6C18A000675E46 /* openssl.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = openssl.xcframework; sourceTree = "<group>"; };
 		93CE5A5C2E98C3A500A0D168 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		93CE5A5D2E98C3A500A0D168 /* HDAccountWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDAccountWallet.swift; sourceTree = "<group>"; };
 		93CE5A5E2E98C3A500A0D168 /* HDExtendedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDExtendedKey.swift; sourceTree = "<group>"; };
@@ -597,11 +598,9 @@
 		A338E6C22110F9CB000D44EE /* StringKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKey.swift; sourceTree = "<group>"; };
 		A338E6C52110FB31000D44EE /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		A338E6C92110FC2D000D44EE /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
-		A338E6CD21110A09000D44EE /* QRCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QRCode.framework; path = Carthage/Build/iOS/QRCode.framework; sourceTree = "<group>"; };
 		A339393321B352B50010CC4A /* PaperkeyShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperkeyShowViewController.swift; sourceTree = "<group>"; };
 		A339393521B877750010CC4A /* PassphraseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassphraseViewController.swift; sourceTree = "<group>"; };
 		A339393921B877AE0010CC4A /* TorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorViewController.swift; sourceTree = "<group>"; };
-		A33B759D21A5CDD400030CCF /* BitcoinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BitcoinKit.framework; path = Carthage/Build/iOS/BitcoinKit.framework; sourceTree = "<group>"; };
 		A33B75BF21A61A3500030CCF /* CurrencyInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInput.swift; sourceTree = "<group>"; };
 		A33B75C321A8917700030CCF /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A33DB6942231D2010070DBCE /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
@@ -691,7 +690,6 @@
 		A3AF9A5E21D8F02C00B5CDF6 /* NoContactsPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContactsPlaceholderView.swift; sourceTree = "<group>"; };
 		A3AF9A6021D8F03900B5CDF6 /* NoContactsPlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoContactsPlaceholderView.xib; sourceTree = "<group>"; };
 		A3B186D422444DFC00B093C4 /* WalletContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletContainerView.swift; sourceTree = "<group>"; };
-		A3B2E25A214836B500C31719 /* HGPlaceholders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HGPlaceholders.framework; path = Carthage/Build/iOS/HGPlaceholders.framework; sourceTree = "<group>"; };
 		A3B2E2622148421300C31719 /* NoTransactionsPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTransactionsPlaceholderView.swift; sourceTree = "<group>"; };
 		A3B2E2632148421300C31719 /* NoTransactionsPlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoTransactionsPlaceholderView.xib; sourceTree = "<group>"; };
 		A3B2E2662148577000C31719 /* PlaceholderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTableView.swift; sourceTree = "<group>"; };
@@ -708,13 +706,11 @@
 		A3C2555E25168AA100AD6596 /* CIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColorExtension.swift; sourceTree = "<group>"; };
 		A3C2555F25168AA100AD6596 /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		A3C5C3CD21985B11003B6C02 /* sjcl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sjcl.js; sourceTree = "<group>"; };
-		A3CE63F8243CC297006EE501 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		A3D3A068215661C20018599A /* AddressValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressValidatorTest.swift; sourceTree = "<group>"; };
 		A3D68363213F34E50067E0B9 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		A3D68364213F34E50067E0B9 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		A3D98EE024263D6500A2BBEB /* SupportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTableViewController.swift; sourceTree = "<group>"; };
 		A3D98EE424269A7800A2BBEB /* KeyBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBalance.swift; sourceTree = "<group>"; };
-		A3E32B16225D52D9001A8B0E /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		A3E32B1B225D56D9001A8B0E /* WalletServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletServiceProvider.swift; sourceTree = "<group>"; };
 		A3E32B1D225D56FB001A8B0E /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		A3E32B1F225D5983001A8B0E /* SendViewServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewServiceProvider.swift; sourceTree = "<group>"; };
@@ -868,8 +864,6 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		93A0E5AE2E868AE900CA0875 /* HGPlaceholders */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = HGPlaceholders;
 			sourceTree = "<group>";
 		};
@@ -1413,6 +1407,7 @@
 			children = (
 				93A0E7582E87B1DE00CA0875 /* libcrypto-iOS.a */,
 				93A0E7592E87B1DE00CA0875 /* libcrypto-iOS-Sim.a */,
+				93A774722F6C18A000675E46 /* openssl.xcframework */,
 				93A0E75A2E87B1DE00CA0875 /* libssl-iOS.a */,
 				93A0E75B2E87B1DE00CA0875 /* libssl-iOS-Sim.a */,
 				93A0E7542E87AE8F00CA0875 /* libcrypto.xcframework */,
@@ -1539,13 +1534,8 @@
 				93871CEC2EBF202B006B8CCA /* tor.xcframework */,
 				93871CEA2EBF2004006B8CCA /* Tor.framework */,
 				A3654D8A2517677C007E13B2 /* CoreNFC.framework */,
-				A3E32B16225D52D9001A8B0E /* SwinjectStoryboard.framework */,
-				A33B759D21A5CDD400030CCF /* BitcoinKit.framework */,
-				A3B2E25A214836B500C31719 /* HGPlaceholders.framework */,
 				A398B205212AFF71004ACB73 /* LocalAuthentication.framework */,
-				A338E6CD21110A09000D44EE /* QRCode.framework */,
 				CA522EA6220318B000331B0F /* IntentsUI.framework */,
-				A3CE63F8243CC297006EE501 /* Swinject.framework */,
 				520C9F8038DC087E1693369D /* Pods_VergeSiri.framework */,
 				218EC7DB2931543F54D7BDD8 /* Pods_VergeSiriUI.framework */,
 				5995B38557C190BE59802531 /* Pods_VergeWatch_Extension.framework */,
@@ -2349,9 +2339,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VergeiOS-VergeiOSUITests/Pods-VergeiOS-VergeiOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VergeiOS-VergeiOSUITests/Pods-VergeiOS-VergeiOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2549,9 +2543,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VergeiOS/Pods-VergeiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VergeiOS/Pods-VergeiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2967,7 +2965,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B88XFKB847;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -2993,7 +2991,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B88XFKB847;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -3018,7 +3016,7 @@
 			baseConfigurationReference = 8FF6DE8C35C2285FA032F657 /* Pods-VergeiOS-VergeiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B88XFKB847;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				INFOPLIST_FILE = VergeiOSUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3039,7 +3037,7 @@
 			baseConfigurationReference = D524D1325C449337815830C4 /* Pods-VergeiOS-VergeiOSUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B88XFKB847;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				INFOPLIST_FILE = VergeiOSUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3190,7 +3188,7 @@
 				CODE_SIGN_ENTITLEMENTS = VergeiOS/VergeiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = B88XFKB847;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				DYLIB_CURRENT_VERSION = 0.1;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3199,8 +3197,6 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"-Objc",
-					"\"$(SRCROOT)/libcrypto.xcframework\"",
-					"\"$(SRCROOT)/libssl.xcframework\"",
 					"$(PROJECT_DIR)/vIOS/Tor.framework/Tor/Classes/Core/**",
 					"$(PROJECT_DIR)/vIOS/Tor.framework/Tor/**",
 				);
@@ -3210,7 +3206,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/libcrypto.xcframework\"/**",
+					"\"$(SRCROOT)/libssl.xcframework\"/**",
+					"\"$(SRCROOT)/libcrypto-iOS.a\"",
+					"\"$(SRCROOT)/libcrypto-iOS-Sim.a\"",
+					"\"$(SRCROOT)/libssl-iOS.a\"",
+					"\"$(SRCROOT)/libssl-iOS-Sim.a\"",
+					"\"$(SRCROOT)/openssl.xcframework\"",
+				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallets;
@@ -3232,7 +3236,7 @@
 				CODE_SIGN_ENTITLEMENTS = VergeiOS/VergeiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = B88XFKB847;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				DYLIB_CURRENT_VERSION = 0.1;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3241,8 +3245,8 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"-Objc",
-					"\"$(SRCROOT)/libcrypto.xcframework\"",
-					"\"$(SRCROOT)/libssl.xcframework\"",
+					"\"$(SRCROOT)/libcrypto.xcframework\"/**",
+					"\"$(SRCROOT)/libssl.xcframework\"/**",
 					"$(PROJECT_DIR)/vIOS/Tor.framework/Tor/Classes/Core/**",
 					"$(PROJECT_DIR)/vIOS/Tor.framework/Tor/**",
 				);
@@ -3252,7 +3256,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/libcrypto.xcframework\"/**",
+					"\"$(SRCROOT)/libssl.xcframework\"/**",
+					"\"$(SRCROOT)/libcrypto-iOS.a\"",
+					"\"$(SRCROOT)/libcrypto-iOS-Sim.a\"",
+					"\"$(SRCROOT)/libssl-iOS.a\"",
+					"\"$(SRCROOT)/libssl-iOS-Sim.a\"",
+					"\"$(SRCROOT)/openssl.xcframework\"",
+				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = org.verge.wallets;
@@ -3271,7 +3283,7 @@
 				CODE_SIGN_ENTITLEMENTS = VergeSiriUI/Assets/VergeSiriUI.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B88XFKB847;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				INFOPLIST_FILE = VergeSiriUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3296,7 +3308,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VergeSiriUI/Assets/VergeSiriUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B88XFKB847;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				INFOPLIST_FILE = VergeSiriUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3320,7 +3332,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -3351,7 +3363,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2S67AX93WQ;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -3380,7 +3392,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VergeSiri/VergeSiri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B88XFKB847;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -3408,7 +3420,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VergeSiri/VergeSiri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B88XFKB847;
+				DEVELOPMENT_TEAM = 7MPKBKE3UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
